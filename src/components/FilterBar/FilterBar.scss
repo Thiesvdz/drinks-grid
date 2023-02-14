@@ -1,0 +1,110 @@
+$navcolor: rgba(238, 238, 238, 0.4);
+$fallback: #00b4db;
+.filterBar {
+  position: fixed;
+  height: 10rem;
+  background: $navcolor;
+  border: 0.2rem solid $navcolor;
+  backdrop-filter: blur(10px);
+  background: #00b4db; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(0, 131, 176, 0.4),
+    rgba(0, 180, 219, 0.4)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    rgba(0, 131, 176, 0.4),
+    rgba(0, 180, 219, 0.4)
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  top: 0;
+  left: 0;
+  right: 0;
+  .filterBar--wrapper {
+    width: 60vw;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    .filterbar__input--wrapper {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      input {
+        width: 2rem;
+        height: 2rem;
+        transition: 0.2s all;
+      }
+      label {
+        transition: 0.2s all; 
+        color: #eee;
+        background: #00b4db;
+        padding: 0.5rem 2rem;
+        border-radius: 0.5rem;
+        border: 0.1rem solid $navcolor;
+        box-shadow: 0 0.1rem 0 0 rgb(0, 0, 0);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        &::first-letter{
+          text-transform: uppercase;
+        }
+      }
+      input:checked + label {
+        background: rgb(2, 168, 2);
+        box-shadow: inset 0 0.3rem 0 0 black;
+        transform: scale(0.98);
+      }
+
+      .filerBar--checkbox {
+        appearance: none;
+      }
+      
+    }
+    
+  }
+}
+@media screen and (max-width: 625px) {
+  .filterBar {
+    height: 12vh;
+
+    .filterBar--wrapper {
+      width: 100vw;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+
+      // margin: 0 auto;
+      align-items: center;
+      .filterbar__input--wrapper {
+        display: flex;
+        align-items: center;
+        // gap: 1rem;
+
+        .filerBar--checkbox {
+          appearance: none;
+        }
+      }
+    }
+  }
+}
+.counter--wrapper{
+  position: relative;
+.counter{
+  position: absolute;
+  // transform: translateX(45%) translateY(4rem);
+  // right: 30%;
+  top: -1rem;
+  background: #00b4db;
+  padding: 3rem 3.5rem;
+  border-radius: 50%;
+  border: 0.3rem solid $navcolor;
+}
+.counter--pro{
+  top: -1rem;
+  left: 50rem;
+}
+}

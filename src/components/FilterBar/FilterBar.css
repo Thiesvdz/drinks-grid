@@ -1,0 +1,135 @@
+.filterBar {
+  position: fixed;
+  height: 10rem;
+  background: rgba(238, 238, 238, 0.4);
+  border: 0.2rem solid rgba(238, 238, 238, 0.4);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background: #00b4db;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 131, 176, 0.4)), to(rgba(0, 180, 219, 0.4)));
+  background: linear-gradient(to right, rgba(0, 131, 176, 0.4), rgba(0, 180, 219, 0.4));
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.filterBar .filterBar--wrapper {
+  width: 60vw;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filterBar .filterBar--wrapper .filterbar__input--wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.filterBar .filterBar--wrapper .filterbar__input--wrapper input {
+  width: 2rem;
+  height: 2rem;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.filterBar .filterBar--wrapper .filterbar__input--wrapper label {
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  color: #eee;
+  background: #00b4db;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(238, 238, 238, 0.4);
+  -webkit-box-shadow: 0 0.1rem 0 0 black;
+          box-shadow: 0 0.1rem 0 0 black;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+  cursor: pointer;
+}
+
+.filterBar .filterBar--wrapper .filterbar__input--wrapper label::first-letter {
+  text-transform: uppercase;
+}
+
+.filterBar .filterBar--wrapper .filterbar__input--wrapper input:checked + label {
+  background: #02a802;
+  -webkit-box-shadow: inset 0 0.3rem 0 0 black;
+          box-shadow: inset 0 0.3rem 0 0 black;
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.filterBar .filterBar--wrapper .filterbar__input--wrapper .filerBar--checkbox {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+@media screen and (max-width: 625px) {
+  .filterBar {
+    height: 12vh;
+  }
+  .filterBar .filterBar--wrapper {
+    width: 100vw;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .filterBar .filterBar--wrapper .filterbar__input--wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .filterBar .filterBar--wrapper .filterbar__input--wrapper .filerBar--checkbox {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+}
+
+.counter--wrapper {
+  position: relative;
+}
+
+.counter--wrapper .counter {
+  position: absolute;
+  top: -1rem;
+  background: #00b4db;
+  padding: 3rem 3.5rem;
+  border-radius: 50%;
+  border: 0.3rem solid rgba(238, 238, 238, 0.4);
+}
+
+.counter--wrapper .counter--pro {
+  top: -1rem;
+  left: 50rem;
+}
+/*# sourceMappingURL=FilterBar.css.map */
